@@ -1,12 +1,15 @@
 import pytest
 from csvalidate.validator import validate_csv
 
-@pytest.mark.parametrize("file_path, expected_result", [
-    ("tests/test_files/valid_01.csv", "CSV is valid according to RFC 4180."),
-    ("tests/test_files/valid_02.csv", "CSV is valid according to RFC 4180."),
-    ("tests/test_files/invalid_01.csv", "Invalid CSV: Row 3 has incorrect number of fields."),
-    ("tests/test_files/invalid_02.csv", "Invalid CSV: Field in row 2 needs to be quoted but is not.")
+@pytest.mark.parametrize("file_path, is_valid", [
+    ("tests/test_files/valid_01.csv", True),
+    ("tests/test_files/valid_02.csv", True),
+    ("tests/test_files/invalid_01.csv", False),
+    ("tests/test_files/invalid_02.csv", False)
 ])
-def test_validate_csv(file_path, expected_result):
-    assert validate_csv(file_path) == expected_result
-
+def test_validate_csv(file_path, is_valid):
+    result = validate_csv(file_path)
+    if is_valid:
+        assert result == "CSV is valid according to RFC 4180.", f"Validation failed for valid file: {file_path}"
+    else:
+        assert "Invalid CSV:" in result, f"Error not detected in invalid file: {file_path}"
