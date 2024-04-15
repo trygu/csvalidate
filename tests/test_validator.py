@@ -1,5 +1,5 @@
 import pytest
-from csvalidate.validator import validate_csv
+from rfccsv.validator import validate_csv
 
 @pytest.mark.parametrize("file_path, is_valid", [
     ("tests/test_files/valid_01.csv", True),

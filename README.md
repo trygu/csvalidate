@@ -1,6 +1,6 @@
-# csvalidate
+# rfccsv
 
-`csvalidate` is a lightweight, easy-to-use Python package designed to validate CSV files according to RFC 4180 standards. It ensures that CSV files are properly formatted and meet the criteria necessary for standardized data processing tasks.
+`rfccsv` is a lightweight, easy-to-use Python package designed to validate CSV files according to RFC 4180 standards. It ensures that CSV files are properly formatted and meet the criteria necessary for standardized data processing tasks.
 
 ## Features
 
@@ -10,24 +10,24 @@
 
 ## Installation
 
-Install `csvalidate` using pip:
+Install `rfccsv` using pip:
 
 ```bash
-pip install csvalidate
+pip install rfccsv
 ```
 
 Or, if you are using Poetry:
 
 ```bash
-poetry add csvalidate
+poetry add rfccsv
 ```
 
 ## Usage
 
-Here’s how you can use `csvalidate` to validate a CSV file:
+Here’s how you can use `rfccsv` to validate a CSV file:
 
 ```python
-from csvalidate import validate_csv
+from rfccsv import validate_csv
 
 # Validate a CSV file
 result = validate_csv('path/to/your/file.csv')
@@ -48,7 +48,7 @@ Distributed under the MIT License.
 
 ## Contact
 
-Project Link: [https://github.com/trygu/csvalidate](https://github.com/trygu/csvalidate)
+Project Link: [https://github.com/trygu/rfccsv](https://github.com/trygu/rfccsv)
 
 ## Acknowledgements
 
