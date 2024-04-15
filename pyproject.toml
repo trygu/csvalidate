@@ -1,10 +1,12 @@
 [tool.poetry]
 name = "csvalidate"
 version = "0.1.0"
-description = ""
+description = "A simple RFC 4180 CSV validator."
 authors = ["Trygve Falch <trygve.falch@gmail.com>"]
 license = "MIT"
 readme = "README.md"
+homepage = "https://github.com/trygu/csvalidate"  # Optional: Project homepage URL
+repository = "https://github.com/trygu/csvalidate"  # Project repository URL
 
 [tool.poetry.dependencies]
 python = "^3.11"
