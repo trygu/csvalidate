@@ -4,7 +4,7 @@
 
 ## Features
 
-- Validate any CSV file to check its compliance with RFC 4180.
+- Validate any CSV file to check its compliance with [RFC 4180](https://www.ietf.org/rfc/rfc4180.txt).
 - Easy integration into existing Python projects.
 - Detailed error reporting for quick troubleshooting of CSV files.
 
